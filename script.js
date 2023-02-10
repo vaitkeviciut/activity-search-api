@@ -19,7 +19,7 @@ activityForm.addEventListener('submit', (event) => {
 
     let selectedCategory = activitySelection.value;
 
-    fetch(`http://www.boredapi.com/api/activity?type=${selectedCategory}`)
+    fetch(`https://www.boredapi.com/api/activity?type=${selectedCategory}`)
         .then(res => res.json())
         .then(data => {
             let activityType = data.type
