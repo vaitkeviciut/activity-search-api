@@ -9,16 +9,40 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-wrapper">
-            <form id="activity-form">
-                <p class="form-description">Do not know what to do with your free time? Let us help you!</p>
-                <select name="category" id="category"></select>
-                <input class="button" type="submit" value="Get activity">
+        <div class="content-wrapper">
+            <form class="activity-form" id="form">
+                <h1 class="form-title">Bored?</h1>
+                <h2 class="form-description">Let us help you!</h2>
+                <div class="type-wrapper">
+                    <label class="activity-title" for="activity-type">Activity type:</label>
+                    <select class="activity-input" name="activity-type" id="activity-type">
+                    </select>
+                </div>
+                
+                <div class="type-wrapper">
+                    <label class="activity-title" for="price-range">Price range (min, max):</label>
+                    <input class="activity-input" type="number" name="price-range" id="price-range-left" min="0" max="10" value="1">
+                    <input class="activity-input" type="number" id="price-range-right" min="0" max="10" value="10">
+                </div>
+                <div class="type-wrapper">
+                    <label class="activity-title" for="participants">Number of Participants:</label>
+                    <select class="activity-input" name="participants" id="participants"></select>
+                </div>
+                <div class="type-wrapper">
+                    <label class="activity-title" for="accessibility">Accessibility range (min, max):</label>
+                    <input class="activity-input" type="number" name="price-range" id="accessibility-range-left" min="0" max="10" value="1">
+                    <input class="activity-input" type="number" id="accessibility-range-right" min="0" max="10" value="10">
+                </div>
+                <div class="button-wrapper">
+                    <input class="activity-button customized" type="submit" value="Customized activity" id="selected-input">
+                    <input class="activity-button random" type="submit" value="Random activity" id="input">
+                </div>
             </form>
-        
-            <p id="activity-output"></p>
         </div>
+        
+        
     </div>
+
     
 
     <script src="script.js"></script>
